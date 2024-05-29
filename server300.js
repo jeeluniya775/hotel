@@ -3,6 +3,7 @@ const app = express(); // એક્સપ્રેસ એપ્લિકેશ�
 const db = require('./db'); // ડેટાબેસ ફાઇલ ઇમ્પોર્ટ કરો (Import the database file)
 const bodyParser = require('body-parser'); // બોડી-પાર્સર ઇમ્પોર્ટ કરો (Import the body-parser)
 app.use(bodyParser.json()); // બોડી-પાર્સર માધ્યમથી JSON ડેટા હેન્ડલ કરો (Handle JSON data through body-parser)
+require('dotenv').config();
 
 // મૂળભૂત રુટ પર GET વિનંતી માટે હેન્ડલર
 app.get('/', function(req, res) {
