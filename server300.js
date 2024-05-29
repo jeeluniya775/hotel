@@ -21,3 +21,4 @@ app.use('/Menuitem', menuitemRoutes); // મેનુ આઈટમ રૂટ્�
 
 console.log('Server is running'); // સર્વર ચાલી રહ્યો છે (Server is running)
 app.listen(3000); // સર્વરને 3000 પોર્ટ પર સાંભળો (Listen to the server on port 3000)
+// commment
