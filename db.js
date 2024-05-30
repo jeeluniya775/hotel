@@ -4,12 +4,15 @@ const mongoose = require('mongoose');
 //const mongoURL = 'mongodb://localhost:27017/hotel';
  // Replace 'yourDatabaseName' with the actual name of your database
 
-const mongoURL= 'mongodb+srv://jeelpatel1817:JEELPATEL1817@hotel.sbunw1q.mongodb.net/'
+//const mongoURL= 'mongodb+srv://jeelpatel1817:JEELPATEL1817@hotel.9mk2c8u.mongodb.net/'
+//const mongoURL='mongodb+srv://iam:12345678jeel@hotel.sbunw1q.mongodb.net/?retryWrites=true&w=majority&appName=hotel'
+require('dotenv').config();
+
+const mongoURL=process.env.MONGODB_URL 
 
 // Connect to MongoDB
 mongoose.connect(mongoURL, {
-   // useNewUrlParser: true,
-    //useUnifiedTopology: true
+   //const url ='mongodb+srv://<username>:<password>@hotel.sbunw1q.mongodb.net/?retryWrites=true&w=majority&appName=hotel'
 });
 
 // Get the default connection

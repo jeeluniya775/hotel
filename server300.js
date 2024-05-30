@@ -4,6 +4,8 @@ const db = require('./db'); // ડેટાબેસ ફાઇલ ઇમ્પ�
 const bodyParser = require('body-parser'); // બોડી-પાર્સર ઇમ્પોર્ટ કરો (Import the body-parser)
 app.use(bodyParser.json()); // બોડી-પાર્સર માધ્યમથી JSON ડેટા હેન્ડલ કરો (Handle JSON data through body-parser)
 require('dotenv').config();
+ const PORT = process.env.PORT || 3000;
+
 
 // મૂળભૂત રુટ પર GET વિનંતી માટે હેન્ડલર
 app.get('/', function(req, res) {
@@ -20,5 +22,5 @@ app.use('/person', personRoutes); // પર્સન રૂટ્સનો ઉ�
 app.use('/Menuitem', menuitemRoutes); // મેનુ આઈટમ રૂટ્સનો ઉપયોગ કરો (Use the menu item routes)
 
 console.log('Server is running'); // સર્વર ચાલી રહ્યો છે (Server is running)
-app.listen(3000); // સર્વરને 3000 પોર્ટ પર સાંભળો (Listen to the server on port 3000)
+app.listen(PORT); // સર્વરને 3000 પોર્ટ પર સાંભળો (Listen to the server on port 3000)
 // commment
